@@ -1,0 +1,105 @@
+/* .contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 300px;
+  margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  padding: 10px;
+  background: cyan;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: white;
+  color: black;
+} */
+
+/* FULL PAGE CENTER */
+.contact-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+}
+
+/* CARD */
+.contact-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  width: 350px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+}
+
+/* HEADING */
+.contact-card h2 {
+  margin-bottom: 25px;
+  color: #333;
+}
+
+/* FORM */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* INPUT */
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+/* FOCUS EFFECT */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0,123,255,0.3);
+}
+
+/* TEXTAREA */
+.contact-form textarea {
+  min-height: 100px;
+  resize: none;
+}
+
+/* BUTTON */
+.contact-form button {
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(45deg, #007bff, #00c6ff);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* BUTTON HOVER */
+.contact-form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}

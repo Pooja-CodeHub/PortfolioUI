@@ -1,0 +1,63 @@
+/* .skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background: #111;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  background: cyan;
+  color: black;
+} */
+ /* FULL PAGE CENTER */
+.skills-container-main {
+  min-height: 100vh;
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+}
+
+/* HEADING */
+.skills-container-main h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* GRID */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 25px;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* CARD */
+.card {
+  background: white;
+  color: #333;
+  padding: 25px;
+  border-radius: 15px;
+  font-size: 18px;
+  font-weight: 500;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+/* HOVER EFFECT */
+.card:hover {
+  transform: translateY(-10px) scale(1.05);
+  background: #007bff;
+  color: white;
+}
