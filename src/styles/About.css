@@ -1,71 +1,67 @@
-/* .contact-btn {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 12px 25px;
-  background-color: #007bff;
+
+/* FULL PAGE */
+.about-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;   /* 👈 heading वर, card खाली */
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   color: white;
-  text-decoration: none;
-  border-radius: 25px;
-  font-size: 16px;
-  transition: 0.3s ease;
 }
 
-.contact-btn:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
-} */
- /* FULL PAGE CENTER */
-.about-container {
-  min-height: 100vh;              /* full screen height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f5f5f5;      /* Home sarkha bg */
+/* HEADING TOP */
+.about-container h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.about-container h2 span {
+  color: cyan;   /* 👈 half cyan */
 }
 
 /* CARD */
 .about {
-  max-width: 700px;
-  background: white;
+  max-width: 750px;
+  background: rgba(255, 255, 255, 0.05);   /* 👈 glass effect */
+  backdrop-filter: blur(10px);
   padding: 40px;
   border-radius: 20px;
   text-align: center;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
   transition: 0.3s;
 }
 
 /* HOVER */
 .about:hover {
-  transform: translateY(-8px);
-}
-
-/* HEADING */
-.about h2 {
-  font-size: 34px;
-  margin-bottom: 20px;
-  color: #333;
+ transform: translateY(-10px);
+  box-shadow: 0 0 20px cyan;
 }
 
 /* TEXT */
 .about p {
   font-size: 16px;
-  line-height: 1.7;
-  color: #555;
+  line-height: 1.8;
+  color: #ddd;
 }
 
-/* BUTTON */
+/* BUTTON (same as home) */
 .contact-btn {
   display: inline-block;
   margin-top: 30px;
   padding: 12px 30px;
-  background: #007bff;
-  color: white;
-  border-radius: 30px;
+  background: transparent;
+  border: 2px solid cyan;
+  color: cyan;
+  border-radius: 25px;
   text-decoration: none;
   transition: 0.3s;
 }
 
 .contact-btn:hover {
-  background: #0056b3;
+  background: cyan;
+  color: black;
   transform: scale(1.05);
 }

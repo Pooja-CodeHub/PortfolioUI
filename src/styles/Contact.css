@@ -1,58 +1,40 @@
-/* .contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  width: 300px;
-  margin: auto;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-}
-
-.contact-form button {
-  padding: 10px;
-  background: cyan;
-  border: none;
-  cursor: pointer;
-}
-
-.contact-form button:hover {
-  background: white;
-  color: black;
-} */
-
-/* FULL PAGE CENTER */
+/* MAIN CONTAINER */
 .contact-container {
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* same theme */
 }
 
-/* CARD */
+/* CARD (GLASS EFFECT) */
 .contact-card {
-  background: white;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
   padding: 40px;
   border-radius: 20px;
-  width: 350px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
   text-align: center;
   transition: 0.3s;
+  border: 1px solid rgba(0, 255, 255, 0.3);
 }
 
+/* HOVER */
 .contact-card:hover {
   transform: translateY(-8px);
+  box-shadow: 0 0 20px cyan;
 }
 
 /* HEADING */
 .contact-card h2 {
   margin-bottom: 25px;
-  color: #333;
+  color: white;
+}
+.contact-card h2 span {
+  color: cyan;
 }
 
 /* FORM */
@@ -62,22 +44,30 @@
   gap: 15px;
 }
 
-/* INPUT */
+/* INPUT FIELDS */
 .contact-form input,
 .contact-form textarea {
   padding: 12px;
   border-radius: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid rgba(255,255,255,0.2);
   outline: none;
-  transition: 0.3s;
+  background: transparent;
+  color: white;
   font-size: 14px;
+  transition: 0.3s;
+}
+
+/* PLACEHOLDER */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #aaa;
 }
 
 /* FOCUS EFFECT */
 .contact-form input:focus,
 .contact-form textarea:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 8px rgba(0,123,255,0.3);
+  border-color: cyan;
+  box-shadow: 0 0 8px cyan;
 }
 
 /* TEXTAREA */
@@ -86,20 +76,38 @@
   resize: none;
 }
 
-/* BUTTON */
+/* BUTTON (same as home) */
 .contact-form button {
   padding: 12px;
   border-radius: 25px;
-  border: none;
-  background: linear-gradient(45deg, #007bff, #00c6ff);
-  color: white;
+  border: 2px solid cyan;
+  background: transparent;
+  color: cyan;
   font-size: 16px;
   cursor: pointer;
   transition: 0.3s;
 }
 
-/* BUTTON HOVER */
+/* HOVER */
 .contact-form button:hover {
+  background: cyan;
+  color: black;
   transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+  .contact-card {
+    padding: 25px;
+  }
+
+  .contact-card h2 {
+    font-size: 22px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 13px;
+  }
 }

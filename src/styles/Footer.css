@@ -1,3 +1,4 @@
+/* FOOTER */
 .footer {
   text-align: center;
   padding: 25px;
@@ -5,20 +6,23 @@
   color: white;
 }
 
-/* LINKS */
+/* ICONS */
 .social-links {
-  margin-top: 10px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
+/* ICON STYLE */
 .social-links a {
   color: cyan;
-  text-decoration: none;
-  font-weight: 500;
+  font-size: 28px;   /* 👈 icon size */
   transition: 0.3s;
 }
 
 /* HOVER */
 .social-links a:hover {
   color: white;
-  text-decoration: underline;
+  transform: scale(1.2);
 }

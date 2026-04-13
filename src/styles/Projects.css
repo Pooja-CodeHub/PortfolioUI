@@ -1,31 +1,20 @@
-/* .projects {
-  padding: 50px;
-  text-align: center;
-}
-
-.project-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.project-card {
-  padding: 20px;
-  background: #eee;
-} */
- /* MAIN CONTAINER */
+/* MAIN CONTAINER */
 .projects-container {
   min-height: 100vh;
   text-align: center;
   padding: 60px 20px;
-  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); /* same theme */
+  color: white;
 }
 
 /* HEADING */
 .projects-container h2 {
-  font-size: 36px;
-  margin-bottom: 40px;
-  color: #333;
+  font-size: 40px;
+  margin-bottom: 50px;
+  color: white;
+}
+ .projects-container h2 span {
+  color: cyan;
 }
 
 /* GRID */
@@ -33,54 +22,80 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
 }
 
 /* CARD */
 .project-card {
-  background: white;
-  padding: 25px;
-  border-radius: 15px;
-  text-align: left;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  transition: 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);   /* glass effect */
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  transition: 0.3s;
+  border: 1px solid rgba(0, 255, 255, 0.3);
 }
 
 /* HOVER */
 .project-card:hover {
   transform: translateY(-10px);
+  box-shadow: 0 0 20px cyan;
 }
 
 /* TITLE */
 .project-card h3 {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  color: cyan;
 }
 
 /* TEXT */
 .project-card p {
-  color: #555;
-  margin-bottom: 15px;
+  color: #ccc;
+  margin-bottom: 20px;
+  font-size: 15px;
 }
 
 /* BUTTONS */
 .buttons {
   display: flex;
+  justify-content: center;
   gap: 10px;
 }
 
-/* BUTTON STYLE */
+/* BUTTON STYLE (same as home) */
 .buttons a {
   text-decoration: none;
-  padding: 8px 15px;
+  padding: 8px 18px;
   border-radius: 20px;
-  background: #007bff;
-  color: white;
-  font-size: 14px;
+  border: 2px solid cyan;
+  color: cyan;
   transition: 0.3s;
+  font-size: 14px;
 }
 
 /* HOVER */
 .buttons a:hover {
-  background: #0056b3;
+  background: cyan;
+  color: black;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+  .projects-container h2 {
+    font-size: 30px;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+
+  .project-card h3 {
+    font-size: 18px;
+  }
+
+  .project-card p {
+    font-size: 14px;
+  }
 }
