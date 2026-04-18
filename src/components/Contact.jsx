@@ -1,5 +1,3 @@
-
-
 import { useState } from "react";
 import "./../styles/Contact.css";
 
@@ -18,29 +16,26 @@ function Contact() {
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    try {
-      const response = await fetch("http://localhost:8080/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(formData)
-      });
+    const { name, email, message } = formData;
 
-      if (response.ok) {
-        alert("Message Sent Successfully ✅");
-        setFormData({ name: "", email: "", message: "" });
-      } else {
-        alert("Failed ❌");
-      }
+    // Encode values safely
+    const subject = encodeURIComponent(`Contact from ${name}`);
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+    );
+    const yourEmail = " sonawanepooja675@gmail.com";
+    const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=${yourEmail}&su=${subject}&body=${body}`;
+    const mailtoURL = `mailto:${yourEmail}?subject=${subject}&body=${body}`;
+    const newWindow = window.open(gmailURL, "_blank");
 
-    } catch (error) {
-      console.error(error);
-      alert("Error ❌");
+    if (!newWindow) {
+      window.location.href = mailtoURL;
     }
+
+    setFormData({ name: "", email: "", message: "" });
   };
 
   return (

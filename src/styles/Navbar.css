@@ -10,11 +10,15 @@
   display: flex;
   justify-content: space-between;   
   align-items: center;
-  background-color: black;
-  padding: 15px 20px;
+  background: rgba(15, 47, 54, 0.75); /* slightly richer */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Safari support */
+  padding: 15px 40px; /* more breathing space */
   position: sticky;
   top: 0;
   z-index: 1000;
+
+  border-bottom: 1px solid rgba(0, 230, 208, 0.15); /* subtle glow */
 }
 
 /* UL */
@@ -39,7 +43,7 @@
 /* LINKS */
 .navbar ul li a {
   text-decoration: none;
-  color: white;
+  color: #e6f7f9;
   font-size: 18px;
   font-weight: 500;
   transition: 0.3s;
@@ -47,7 +51,7 @@
 
 /* HOVER EFFECT */
 .navbar ul li a:hover {
-  color: #00c6ff;
+  color: #00e6d0;
   border-bottom: 2px solid cyan;
   padding-bottom: 5px;
 }
